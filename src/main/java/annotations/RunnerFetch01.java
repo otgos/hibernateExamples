@@ -3,11 +3,13 @@ package annotations;
 import java.util.Arrays;
 import java.util.List;
 
+import oneToOne.Student03;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 
 public class RunnerFetch01 {
 
@@ -75,6 +77,13 @@ public class RunnerFetch01 {
 		for(Object obj : resultList) {
 			System.out.println(obj);
 		}
+
+		Query query = session.createQuery("FROM Student03");
+		List<Student03> resultList5 = query.getResultList();
+		for(Student03 student03: resultList5){
+			System.out.println(student03);
+		}
+
 		tx.commit();
 		//we have to call session close
 		session.close();

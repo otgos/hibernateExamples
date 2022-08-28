@@ -1,11 +1,11 @@
 package embeddable;
 
+import oneToOne.Diary;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.hb01.annotations.Student01;
 
 public class RunnerSave02 {
 
@@ -25,7 +25,8 @@ public class RunnerSave02 {
 		student1.setAddress(address);
 		
 		
-		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student02.class);
+		Configuration con = new Configuration().configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Student02.class);
 		SessionFactory sf = con.buildSessionFactory();
 		Session session = sf.openSession();
 		
