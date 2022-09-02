@@ -36,6 +36,14 @@ public class Book07 {
         return bookType;
     }
 
+    public List<Student07> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student07> students) {
+        this.students = students;
+    }
+
     public void setBookType(BookType bookType) {
         this.bookType = bookType;
     }
