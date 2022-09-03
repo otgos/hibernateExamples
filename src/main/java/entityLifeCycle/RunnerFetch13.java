@@ -1,11 +1,11 @@
-package get_load_method;
+package entityLifeCycle;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class RunnerFetch12 {
+public class RunnerFetch13 {
     public static void main(String[] args) {
 
 
@@ -16,7 +16,7 @@ public class RunnerFetch12 {
 
 
         Configuration con=new  Configuration().configure("hibernate.cfg.xml").
-                addAnnotatedClass(Student12.class);
+                addAnnotatedClass(Student13.class);
 
         SessionFactory sf=con.buildSessionFactory();
         Session session= sf.openSession();
@@ -46,7 +46,7 @@ public class RunnerFetch12 {
 
         //load method makes it faster, because it just brings the reference... we do not see the detail
         //we can create relation with other object with load method
-        Student12 student3 = session.load(Student12.class, 1);
+        Student13 student3 = session.load(Student13.class, 1);
         session.delete(student3);
 
         tx.commit();

@@ -1,13 +1,11 @@
-package get_load_method;
-
-import org.hibernate.annotations.CacheConcurrencyStrategy;
+package entityLifeCycle;
 
 import javax.persistence.*;
 
 @Entity
 
 
-public class Student12 {
+public class Student13 {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,7 +44,7 @@ public class Student12 {
 
 	@Override
 	public String toString() {
-		return "Student12 [id=" + id + ", name=" + name + ", grade=" + mathGrade + "]";
+		return "Student13 [id=" + id + ", name=" + name + ", grade=" + mathGrade + "]";
 	}
 
 
